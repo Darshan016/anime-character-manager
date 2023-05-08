@@ -1,0 +1,13 @@
+<div class="search-box">
+  <input type="text" placeholder="Search waifu" [(ngModel)]="searchText" />
+  <button (click)="search()" type="button">Go</button>
+  <button (click)="reset()" type="button">Clear</button>
+</div>
+
+<div class="card" *ngFor="let c of char">
+  <img src="../../assets/pics/{{c.name}}.jpg" alt={{c.name}}>
+  <div class="card-content">
+      <h4>{{c.name}}</h4>
+      <p>Appeared in {{c.show}}</p>
+   </div>
+</div>
